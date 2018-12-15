@@ -1,0 +1,439 @@
+.,English
+quest.name,Chapeldown Manor
+quest.description,"On top of the hill stands an old manor with a chapel connecting to it. It once served as an inn but has been abandoned since the mysterious disappearance of the owner and all his resident guests. There are rumours of ghosts haunting this manor and recent stories of students disappearing while playing a dare to stay the night at Chapeldown Manor. \n\nThis scenario requires investigators to uncover the truth about the disappearences and prevent this from ever happening again before time runs out.\n\nNote: this scenario randomly selects a storyline out of 5 possible storylines and is played in a randomly selected mansion (2 possible layouts).\n\n<i>A scenario for Mansions of Madness 2nd Edition.\nThis scenario uses tiles from the expansion ""Streets of Arkham""</i>"
+quest.authors,Anton Timmermans\nWilliam van den Broek
+UIIntroductionContinueBackground.button1,Button1
+UIIntroductionContinueText.uitext,Continue
+UIIntroductionContinueText.button1,Button1
+UIIntroductionText.uitext,"<i>""The rumours about Chapeldown Manor MUST be true""</i> the female voice had said on the telephone. The voice belonged to Elli Horrowitz, a friend of mine. Convinced of the existense of the occult since the last investigation we did together. \n\nShe had been researching ghost stories and scanning newspapers, searching for more proof. <i>""I will go to Chapeldown Manor just before 22:00. According to my reseach it is the time  that the ghost will appear. Are you comming too? It will be like old times, you and me together hunting ghost"".</i> She sounded so exited, but this was not the first time we had chased a wild goose. I should have said yes.\n\n This was 3 days ago and the last time that I heard from her. Is she angy with me or did she vanish like all the stories that surround this manor suggest? She is not answering her phone and hasn't been seen at her appartment lately. I'd better check out the manor. What if she was right....\n\n "
+CONTINUE,Continue
+ATTACK,Attack
+EXPLORE,{action} Explore
+SEARCH,{action} Search
+OPEN,{action} Open
+TokenTEST.button1, Manor Selection
+EventTESTManorSelection.button1,Assign
+EventTESTManorSelection.text,Select 1 for Manor A\nSelect 2 for Manor B
+EventTESTStorySelection.button1,Assign
+TokenTEST.button2,Story Selection
+TokenTEST.text,Selection test {MAD25} number of players {var:#heroes}\nManor: {var:Manor}\nStory: {var:Story}
+EventTESTStorySelection.text,Select 1-5 for story version
+TokenTEST.button3,Place Lobby
+EventBLobbyPlaceTile.text,A sinister creaking noise from the door announces your arrival in the mansion. The silver-grey light of the full moon that seeps in through the small windows make the dustcovered lobby look even more earie.  Place tile {c:TileBLobby} as indicated
+EventALobbyPlaceTile.button1,{qst:CONTINUE}
+EventLobbyPlaceTile.button1,Button1
+EventBLobbyPlaceTile.button1,{qst:CONTINUE}
+EventALobbyPlaceTokenWall1.text,Place a Wall Token as indicated
+EventQStartRound.button1,{qst:CONTINUE}
+EventQEndRound.text,End of Round{var:#round}
+EventQStartRound.text,Start of round {var:#round}
+EventGhostRemove.button1,Button1
+TokenBExploreHallOther.text,"The copper plaque on this door reads "" 2""."
+TokenBExploreHallOther.button1,{qst:OPEN}
+TokenBExploreLeisureLibrary.text,The painting of a book on the door suggest that this door will lead to the library.
+TokenBExploreLeisureLibrary.button1,{qst:OPEN}
+TokenBExploreLobbyHall.text,This door leads further into the mansion.
+TokenBExploreLobbyHall.button1,{qst:OPEN}
+TokenBExploreLobbyLeisure.text,You barely recognise the picture on this door of a mug spilling beer.
+TokenBExploreLobbyLeisure.button1,{qst:OPEN}
+TokenBExploreHallBedroom.button1,{qst:OPEN}
+TokenBExploreLobbyChapel.text,This heavy oak door has a holy cross nailed to it.
+TokenBExploreLobbyChapel.button1,{qst:OPEN}
+TokenBExploreBedroomOffice.button1,{qst:OPEN}
+TokenBExploreLoungeOffice.button1,{qst:OPEN}
+TokenBExploreHallLeisure.text,"The plaque on this door reads ""Speakeasy""."
+TokenBExploreLobbyLounge2.button1,{qst:OPEN}
+EventBloungePlaceConnections.text,"An ornate copper plaque on this door reads ""Office"". Place an Explore Token as indicated."
+EventBLobbyPlaceInvestigators.text,Place the investigators at the entrance of the lobby as indicated.
+TokenBExploreHallLeisure.button1,{qst:OPEN}
+TokenAExploreLobbyLounge.text,When you examine the picture on this door closely it you recognise an ashtray and a smoking cigarette.
+TokenAExploreLobbyOffice.button1,{qst:OPEN}
+TokenAExploreLobbyOffice.text,"This door has a plaque with the text ""Office"" carved into it."
+TokenAExploreLobbyLounge.button1,{qst:OPEN}
+TokenAExploreLobbyHall.text,This door leads further into the mansion.
+TokenAExploreLobbyHall.button1,{qst:OPEN}
+TokenAExploreLoungeLibrary.text,This door barely hangs in its hinges.
+TokenAExploreLoungeLibrary.button1,{qst:CONTINUE}
+TokenASightHallOther.text,A cold draft runs through this hall. An investigator next to this sight token may reveal the next tile.
+TokenASightHallOther.button1,{qst:CONTINUE}
+TokenAExploreBathroom.button1,{qst:OPEN}
+TokenAExploreLibraryOther.text,This door has a painting of books on it.
+TokenAExploreBathroom.text,"Two letters are written on this door decorated with elaborate curls. You recognise one letter as a ""W"" and the other looks more like a ""G"" but is probably a ""C""."
+TokenAExploreLibraryOther.button1,{qst:OPEN}
+TokenAExploreLibraryChapel.button1,{qst:OPEN}
+TokenAExploreHallLeisure.text,The painting on this door resembles biljart balls placed in a triangle.
+TokenAExploreHallBedroom.text,"The paint os this door is peeling off but you can still read the text ""bedroom"" on this door."
+TokenAExploreHallBedroom.button1,{qst:OPEN}
+TokenAExploreLibraryChapel.text,This heavy oak door has a holy cross nailed to it.
+TokenAExploreHallLeisure.button1,{qst:OPEN}
+TokenAExploreLobbyLeisure.text,"The copper plaque on this door has become dull and weathered. You can decipher the letters ""Bil...rts"" engraved into it."
+TokenAExploreLobbyLeisure.button1,{qst:OPEN}
+EventAOfficePlaceTile.text,The office is covered in thick layers of dust and cobwebs. Place the {c:TileAOffice} tile as indicated and remove the explore token leading to it.
+EventAOfficePlaceTile.button1,{qst:CONTINUE}
+EventAOfficePlaceWall.button1,{qst:CONTINUE}
+EventQDarknessAllPlaced.button1,{qst:CONTINUE}
+EventQMoveOneSpace.button1,{qst:CONTINUE}
+EventQMoveOneSpace.text,You may move one space in the revealed area.
+EventALobbyPlaceTile.text,A sinister creaking noise from the door announces your arrival in the mansion. The silver-grey light of the full moon that seeps in through the small windows make the dustcovered lobby look even more earie. Place the {c:TileALobby} as indicated.
+EventALobbyPlaceTokenWall1.button1,{qst:CONTINUE}
+EventALobbyPlaceWall2.text,Place another Wall Token as indicated
+EventALobbyPlaceWall2.button1,{qst:CONTINUE}
+EventLobbyPlaceExploreOffice.button1,{qst:CONTINUE}
+EventLobbyPlaceExploreLeisure.text,"The copper plaque on the door at the other side of the lobby is barely readable: ""Bil...rts"". Place an Explore Token as indicated."
+EventLobbyPlaceExploreOffice.text,"The dull copper plaque on this door reads ""Office"". Place an Explore Token as indicated."
+EventLobbyPlaceExploreLeisure.button1,{qst:CONTINUE}
+EventALobbyPlaceExploreHall.button1,{qst:CONTINUE}
+EventALobbyPlaceExploreLounge.text,The paint on this door is peiling off. It is hard to recognise the picture marking this door from this distance. Place an Explore Token as indicated.
+EventALobbyPlaceExploreHall.text,This unmarked door leads further into the mansion. Place an Explore Token as indicated
+EventALobbyPlaceExploreLounge.button1,{qst:CONTINUE}
+EventALobbyPlaceInvestigators.text,Place the investigators at the entrance of the lobby as indicated.
+EventALobbyPlaceInvestigators.button1,{qst:CONTINUE}
+EventQInvestigatorsStartClues3.text,Each investigator starts with 3 Clues
+EventQInvestigatorsStartClues1.text,Each investigator starts with 1 Clue.
+EventQInvestigatorsStartClues1.button1,{qst:CONTINUE}
+EventQInvestigatorsStartClues2.text,Each investigator starts with 2 Clues.
+EventQInvestigatorsStartClues2.button1,{qst:CONTINUE}
+EventQInvestigatorsStartClues3.button1,{qst:CONTINUE}
+EventQLobbyEndPlaceTile.text,A distant thunderclap annouces a storm and dark clouds are closing in. By the sound of it, it is going to be a big thunderstorm, just like the one three nights ago. That was the night that you last heard from Elli. The heavy clouds cover up the moon and the little moon light you had when you entered the mansion is now completely gone... Perfect... No wonder that mansions like this end up in ghost stories.
+EventQDarknessALobby.button1,Button1
+TokenALobbySearchFusebox.button1,{qst:CONTINUE}
+EventALobbyPlaceSearchFuseBox.text,In the wall you notice a panel. Place a Search Token as indicated.
+EventQDarknessRemove.text,Remove all darkness tokens.
+PuzzleFuseBox.button1,Repair
+EventQDarknessRemove.button1,{qst:CONTINUE}
+EventAOfficePlaceItems.button1,Button1
+EventQDarknessAOffice.button1,Button1
+EventQDarknessALeisure.button1,Button1
+EventAOfficePlaceWall.text,Place a Wall Token as indicated.
+EventQDarknessAllPlaced.text,Place Darkness Tokens in each revealed space.
+EventQDarknessAHall.button1,Button1
+TokenTEST.button4,ToggleLights
+EventTESTLightsOn.button1,Button1
+EventTESTLightsOff.button1,Button1
+EventQFuseBoxPass.button1,{qst:CONTINUE}
+EventQFuseBoxPass.text,Fixing the wires in the fusebox restores the electricity in the house. The old wiring makes a complaining buzzing noise. You are in luck, the rodents and the leaking roof have not touched the wiring, no shortcuts and no fire. Some of the lights are even working.
+EventALeisurePlaceTile.text,The cobwebs on this door break when you enter the room. Thick black spiders hurry away to find crack in the wood to hide in. The dimly lit roommust have been the leisure room in the inn. Place the {c:TileALeisure} tile as indicated and remove all tokens leading to it.
+EventALeisurePlaceTile.button1,{qst:CONTINUE}
+EventALeisurePlaceDoor.text,Place a Door Token as indicated.
+EventALeisurePlaceDoor.button1,{qst:CONTINUE}
+EventALeisurePlaceConnections.button1,{qst:CONTINUE}
+EventAHallPlaceExploreLeisure.text,This door must lead to a biljarts room judging from the painting on the door of biljartballs placed in a triangle. Place an Explore Token as indicated.
+EventDialoguePatron.text,Patron Howard Bechman says something
+EventDialoguePatron.button1,{qst:CONTINUE}
+TokenPatronLobby.button1,Button1
+TokenPatronOffice.button1,Button1
+TokenColonelOffice.button1,Button1
+TokenMaidALounge.button1,Button1
+EventDialogueMaid.text,Maid Edna Huges Says something
+EventDialogueMaid.button1,{qst:CONTINUE}
+EventDialogueColonel.text,Colonel Richard Bechman says something
+EventDialogueColonel.button1,{qst:CONTINUE}
+TokenPastorAChapel.button1,Button1
+EventDialoguePastor.text,Pastor Eugene Clements Says something
+EventDialoguePastor.button1,{qst:CONTINUE}
+TokenLadyABedroom.button1,Button1
+EventDialogueLady.text,Lady Othera Gilman says something
+EventDialogueLady.button1,{qst:CONTINUE}
+TokenFriendALobby.button1,Button1
+EventDialogueFriend.text,Friend Elli Horowitz says something
+EventDialogueFriend.button1,{qst:CONTINUE}
+TokenALobbyExploreEntrance.text,The door does not appear locked but for some reason you cannot open it. It is as if some unseen force is preventing you from opening the door
+TokenALobbyExploreEntrance.button1,{qst:CONTINUE}
+EventQRound2.button1,{qst:CONTINUE}
+EventQCloseALobbyDoor.text,With a loud bang, the door slams shut behind you. Place an Explore Token as indicated.
+EventQCloseLobbyDoor.button1,{qst:CONTINUE}
+EventQEndPlaceGhostsRound2.text,Elli was right, this mansion IS haunted. And I let her go into this mansion alone, what was I thinking. If ghosts are stuck to this place they want nothing else then the living to suffer the same fate. Oh Elli, what have you done. Fear overtakes you for a moment when you realize wat might have happened to her. In a flash of clarity you realize that, to end this madness and free yourself, you have to find out why the ghost are haunting this place and how to release them from their torture.
+EventGhostPlacePatronOfficeB.text,You see the translucent form of a man with a black beard appear behind the desk in the {c:TileBOffice}. The ghost of the patron is busy flipping through the pages of a book. Place the Black Person Token as indicated.
+EventALeisurePlaceItems.button1,{qst:CONTINUE}
+EventAHallPlaceTile.button1,{qst:CONTINUE}
+EventAHallPlaceWallTokens.text,Place two Wall Tokens as indicated.
+EventAHallPlaceWallTokens.button1,{qst:CONTINUE}
+EventAHallPlaceTile.text,The hall smells of mold and an odd musky odour. A chilly draft brushes your cheeks when you open the door and a trail of dust is following behind. Was that a whisper that or was that just the wind? You have a compelling urge to turn around, the atmosphere is really uncomfortable. Place the {c:TileAHall} tile as indicated and remove all connecting tokens leading to it.
+EventAHallPlaceConnections.button1,{qst:CONTINUE}
+EventABedroomPlaceTile.text,The moth eaten drapes dance around when you open the door, encouraged by the wind that blows through the broken glass of the small window.  The sheets on the bed are pushed aside as to invite someone to go to sleep. Place the {c:TileABedroom} tile as indicated.
+EventABedroomPlaceTile.button1,{qst:CONTINUE}
+EventABedroomPlaceItems.button1,Button1
+EventALoungePlaceTile.text,This room is damp and has a pungent smell of tobacco. After all these years, the carpet and furniture still carry the familiar odour of the cigars enjoyed in this room. Pace the {c:TileALounge} tile as indicated and remove all tokens connecting to it.
+EventALoungePlaceTile.button1,{qst:CONTINUE}
+EventALoungePlaceWall.text,Place a Wall Token as indicated.
+EventALoungePlaceWall.button1,{qst:CONTINUE}
+EventALoungePlaceDoor.text,Place a Door Token as indicated.
+EventALoungePlaceDoor.button1,{qst:CONTINUE}
+EventALoungePlaceItems.button1,Button1
+EventAOfficePlaceGhostsEnd.button1,Button1
+EventAHallPlaceItems.button1,Button1
+EventALeisurePlaceConnections.text,This door leads to the hall. Place an Explore Token as indicated.
+EventALoungePlaceConnections.text,"The text ""Library"" is painted in white curly letters on this door. Place an Explore Token as indicated."
+EventALoungePlaceConnections.button1,{qst:CONTINUE}
+EventQDarknessALounge.button1,Button1
+EventQDarknessABedroom.button1,Button1
+EventQDarknessALibrary.button1,Button1
+EventQDarknessAChapel.button1,Button1
+EventQDarknessAOther.button1,Button1
+EventAHallPlaceExploreLeisure.button1,{qst:CONTINUE}
+EventAHallPlaceExploreBedroom.text,"This door has the text ""Bedroom 1"" painted on it in white curly letters. Place an Explore Token as indicated"
+EventAHallPlaceExploreBedroom.button1,{qst:CONTINUE}
+EventAHallPlaceSightOther.text,It is too dark to see further down the hall. Place a Sight Token as indicated.
+EventAHallPlaceSightOther.button1,{qst:CONTINUE}
+EventALibraryPlaceTile.text,The walls in this rooms are covered with book filled shelves. The musky odour of old paper is mixed with the smell of mould. Some starteled mice run away when you open the door. Place the {c:TileALibrary} tile as indicated.
+EventALibraryPlaceTile.button1,{qst:CONTINUE}
+EventALibraryPlaceConnections.button1,Button1
+EventALibraryPlaceItems.button1,Button1
+EventAOtherPlaceItems.button1,Button1
+EventALibraryPlaceExploreLounge.text,This door has a drawing of a smoking sigar and an ashtray painted on it. Place an Explore Token as indicated.
+EventALibraryPlaceExploreLounge.button1,{qst:CONTINUE}
+EventALibraryPlaceExploreOther.text,This door has no specific markings on it. Place an Explore Token as indicated.
+EventALibraryPlaceExploreOther.button1,{qst:CONTINUE}
+EventALibraryPlaceExploreChapel.text,A heavy wooden cross is nailed to this door. it probably leads to the chapel. Place an Explore Token as indicated
+EventALibraryPlaceExploreChapel.button1,{qst:CONTINUE}
+EventAOtherPlaceTile.text,The wooden floor in this part of the hall creaks when you step on one of the loose planks. The noise seems to startle some rats under the floor. Place the {c:TileAOther} tile as indicated and remove connecting tokens to it.
+EventAOtherPlaceTile.button1,{qst:CONTINUE}
+EventAOtherPlaceWall.text,Place a Wall Token as indicated
+EventAOtherPlaceWall.button1,{qst:CONTINUE}
+EventAOtherPlaceExploreBathroom.text,"Two letters are written on this door decorated with elaborate curls. You recognise one letter as a ""W"" and the other looks more like a ""G"" but is probably a ""C"". Place an explore token as indicated."
+EventAOtherPlaceExploreBathroom.button1,{qst:CONTINUE}
+EventAOtherPlaceExploreLibrary.text,The books painted on this door are likely a hint that this door leads to the library. Place an Explore Token as indicated.
+EventAOtherPlaceExploreLibrary.button1,{qst:CONTINUE}
+EventAOtherPaceItems.button1,Button1
+EventAOtherPlaceSightHall.text,It is difficult to see the rest of the hall. Place a Sight Token as indicated.
+EventAOtherPlaceSightHall.button1,{qst:CONTINUE}
+EventAChapelPlaceTile.text,You still recognize some religious paintings and statues in this room, but time has not been kind on them. It also looks as if this old chapel last function was that of a class room. Place the {c:TileAChapel} tile as indicated and remove the Explore Token connecting to it.
+EventAChapelPlaceTile.button1,{qst:CONTINUE}
+EventAChapelPlaceWall.text,Place a Wall Token as indicated.
+EventAChapelPlaceWall.button1,{qst:CONTINUE}
+EventAChapelPlaceItems.button1,Button1
+EventAOtherPlaceConnections.button1,Button1
+TokenALobbySearchFusebox.text,The wires in the fusebox all mixed up. The lights should be working properly when the wires are in the correct order. Use your {observation} skill to place the wires back into their place.
+EventALobbyPlaceSearchFuseBox.button1,{qst:CONTINUE}
+EventBLobbyPlaceWall.text,Place a wall token as indicated.
+EventBLobbyPlaceWall.button1,{qst:CONTINUE}
+EventBLobbyPlaceExploreChapel.text,A heavy wooden cross marks this door. Place an explore token as indicated.
+EventBLobbyPlaceExploreChapel.button1,{qst:CONTINUE}
+EventBLobbyPlaceExploreLeisure.text,The paint on this door is peeling off but you stil recognize the picture of a beer filled mug painted on the door. Place an Explore Token as indicated.
+EventBLobbyPlaceExploreLeisure.button1,{qst:CONTINUE}
+EventBLobbyPlaceExploreHall.button1,{qst:CONTINUE}
+EventBLobbyPlaceExploreLounge.text,These two doors hase a small pinaing on them of a smoling cigarette and an ashtray. Place two Explore Tokens as indicated.
+EventBLobbyPlaceExploreHall.text,The cobwebs around this door are broken. It must have been used recently. Place an Explore Token as indicated.
+EventBLobbyPlaceExploreLounge.button1,{qst:CONTINUE}
+TokenBExploreLobbyLounge2.text,The sign on this door is unreadable.
+EventBLobbyPlaceInvestigators.button1,{qst:CONTINUE}
+EventQLobbyEndPlaceTile.button1,{qst:CONTINUE}
+EventBLobbyPlaceSearchFuseBox.button1,{qst:CONTINUE}
+TokenBSearchFuseBox.text,The wires in the fusebox all mixed up. The lights should be working properly when the wires are in the correct order. Use your {observation} skill to place the wires back into their place.
+EventBLobbyPlaceSearchFuseBox.text,In the wall you notice a panel. Place a Search Token as indicated.
+TokenBSearchFuseBox.button1,{qst:CONTINUE}
+TokenALobbySearchFusebox.button2,Cancel
+TokenBSearchFuseBox.button2,Cancel
+EventQDarknessPlace.button1,{qst:CONTINUE}
+EventBChapelPlaceTile.text,The religious paintings on the walls and statues are a distant memory of a chapel. Judging from the desks and chairs this room has been used as classroom. Place the {c:TileBChapel} tile as indicated.
+EventBChapelPlaceTile.button1,{qst:CONTINUE}
+EventBChapelPlaceWall1.text,A heavy oak cabinet is placed against this wall. Place a Wall Token as indicated
+EventBChapelPlaceWall1.button1,{qst:CONTINUE}
+EventBChapelPlaceWall2.text,Another heavy oak cabinet is placed agains this wall. Place a Wall Token as indicated.
+EventBChapelPlaceWall2.button1,{qst:CONTINUE}
+EventQRound2.text,"How can this be, that old clock in the lobby is broken but this sound... the chimes are deaffening. Ten chimes, 10 o'clock.. the ""ghost hour""according to Elli."
+EventQEndPlaceGhosts.button1,Button1
+EventQEndPlaceGhostsRound2.button1,{qst:CONTINUE}
+EventBLoungePlaceTile.text,This room is damp and has a pungent smell of tobacco. After all these years, the carpet and furniture still carry the familiar odour of the cigars enjoyed in this room. Pace the {c:TileALounge} tile as indicated and remove all tokens connecting to it.
+EventBLoungePlaceTile.button1,{qst:CONTINUE}
+TokenBExploreLobbyLounge1.button1,{qst:OPEN}
+EventBloungePlaceConnections.button1,Button1
+EventBLoungePlaceItems.button1,Button1
+EventBOfficePlaceTile.text,The office is covered in thick layers of dust and cobwebs. Place the {c:TileAOffice} tile as indicated and remove the explore tokens leading to it.
+EventBOfficePlaceTile.button1,{qst:CONTINUE}
+EventBOfficePlaceConnections.button1,Button1
+EventBOfficePlaceItems.button1,Button1
+EventBOfficePlaceExploreLounge.text,This door will lead to the lounge. Place an Explore Token as indicated.
+EventBOfficePlaceExploreLounge.button1,{qst:CONTINUE}
+EventBOfficePlaceExploreBedroom.text,"A small copper plaque on this door reads ""Private"". Place an Explore Token as indicated."
+EventBOfficePlaceExploreBedroom.button1,{qst:CONTINUE}
+EventBHallPlaceTile.text,The hall smells of mold and an odd musky odour. A chilly draft brushes your cheeks when you open the door and a trail of dust is following behind. Was that a whisper that or was that just the wind? You have a compelling urge to turn around, the atmosphere is really uncomfortable. Place the {c:TileBHall} tile as indicated and remove all connecting tokens leading to it.
+EventBHallPlaceTile.button1,continue
+EventBHallPlaceWall.text,Place a Wall token as indicated.
+EventBHallPlaceWall.button1,{qst:CONTINUE}
+EventBHallPlaceConnections.button1,Button1
+EventBHallPlaceItems.button1,Button1
+EventBHallPlaceExploreLeisure.text,"The copper plaque on this has the text ""Speakeasy"" engraved on it with ornate letters. Place an Explore Token as indicated."
+EventBHallPlaceExploreLeisure.button1,{qst:CONTINUE}
+EventBHallPlaceExploreOther.text,"A small copper plaque on this door reads the number ""2"". Place an Explore Token as indicated."
+EventBHallPlaceExploreOther.button1,{qst:CONTINUE}
+TokenBExploreHallBedroom.text,"The small copper plaque on this door has the number ""1"" engraved in it."
+EventBHallPlaceExploreBedroom.text,"The door at the end ot he hall is worn down and marked with a small copper plaque ""1"". Place an Explore Token as indicated."
+EventBHallPlaceExploreBedroom.button1,{qst:CONTINUE}
+EventBBedroomPlaceTile.text,The moth eaten drapes dance around when you open the door, encouraged by the wind that blows through the broken glass of the small window.  The sheets on the bed are pushed aside as to invite someone to go to sleep. Place the {c:TileBBedroom} tile as indicated.
+EventBBedroomPlaceTile.button1,{qst:CONTINUE}
+EventBBedroomPlaceItems.button1,Button1
+EventBBedroomPlaceConnections.button1,Button1
+EventBBedroomPlaceExploreHall.text,This worn down door leads to the hall. Place an Explore Token as indicated.
+EventBBedroomPlaceExploreHall.button1,{qst:CONTINUE}
+EventBBedroomPlaceExploreOffice.text,"This door is marked ""Private"""
+EventBBedroomPlaceExploreOffice.button1,{qst:CONTINUE}
+EventBLeisurePlaceTile.text,The cobwebs on this door break when you enter the room. Thick black spiders hurry away to find crack in the wood to hide in. The dimly lit roommust have been the leisure room in the inn. Place the {c:TileBLeisure} tile as indicated and remove all tokens leading to it.
+EventBLeisurePlaceTile.button1,{qst:CONTINUE}
+EventBLeisurePlaceItems.button1,Button1
+EventBLeisurePlaceConnections.button1,Button1
+EventBLeisurePlaceExploreLibrary.text,Thios door has a paining of books on it.\nPlace and Explore Token as indicated.
+EventBLeisurePlaceExploreLibrary.button1,{qst:CONTINUE}
+EventBLeisurePlaceExploreHall.text,This door will lead to the hall. Place an Explore Token as indicated.
+EventBLeisurePlaceExploreHall.button1,{qst:CONTINUE}
+EventBOtherPlaceTile.text,The smell of rot penetrates your nose when you enter this bedroom. Fungi have eaten most of the damp wood and moth ate whatever was left of the the drapes. Place the {c:TileBOther} tile as indicated.
+EventBOtherPlaceTile.button1,{qst:CONTINUE}
+EventBLibraryPlaceTile.text,The walls in this rooms are covered with book filled shelves. The musky odour of old paper is mixed with the smell of mould. Some starteled mice run away when you open the door. Place the {c:TileBLibrary} tile as indicated.
+EventBOtherPlaceItems.button1,Button1
+EventBLibraryPlaceTile.button1,{qst:CONTINUE}
+EventBLibraryPlaceWall.text,An old painting decorates the far end of this room. Place a Wall Token as indicated.
+EventBLibraryPlaceWall.button1,{qst:CONTINUE}
+EventBLibraryPlaceItems.button1,Button1
+EventBChapelPlaceItems.button1,Button1
+TokenBExploreLoungeOffice.text,"The copper plaque on this door is engraved with the text ""Office"". Place an Explore Token as indicated."
+EventQCloseALobbyDoor.button1,{qst:CONTINUE}
+EventQCloseBLobbyDoor.text,With a loud bang, the door slams shut behind you. Place an Explore Token as indicated.
+EventQCloseBLobbyDoor.button1,{qst:CONTINUE}
+EventQEndPlaceTile.button1,Button1
+EventGhostPlacePatron.button1,Button1
+EventGhostPlacePatronOfficeA.button1,{qst:CONTINUE}
+EventGhostPlaceMaid.button1,{qst:CONTINUE}
+EventGhostPlacePastor.button1,{qst:CONTINUE}
+EventGhostPlacePastorOfficeA.text,A solemn looking ghost in bland costume appears in the {c:TileAOffice}. This must be the pastor Eugene Clemens. Place the Yellow Person Token as indicated.
+EventGhostPlaceColonel.button1,{qst:CONTINUE}
+EventGhostPlaceColonelOfficeA.text,The ghost of a grey haired earnest looking man in an army costume appears in the {c:TileAOffice}. This must be the patron's older brother Colonel Richard Bechman. Place the Blue Person Token as indicated.
+EventGhostPlaceMaidOfficeA.text,The ghost of a woman in a maids costume is sweeping the floor of the {c:TileAOffice}. This must be the maid Edna Hughes. Place the White Person Token as indicated.
+EventGhostPlaceLady.button1,{qst:CONTINUE}
+EventGhostPlaceMaidOfficeA.button1,{qst:CONTINUE}
+EventGhostPlacePastorOfficeA.button1,{qst:CONTINUE}
+EventGhostPlacePastorOfficeB.button1,{qst:CONTINUE}
+EventGhostPlacePastorOfficeB.text,A solemn looking ghost in bland costume appears in the {c:TileBOffice}. This must be the pastor Eugene Clemens. Place the Yellow Person Token as indicated.
+EventGhostPlacePatronOfficeB.button1,{qst:CONTINUE}
+EventGhostPlaceMaidOfficeB.button1,{qst:CONTINUE}
+EventGhostPlaceMaidOfficeB.text,The ghost of a woman in a maids costume is sweeping the floor of the {c:TileBOffice}. This must be the maid Edna Hughes. Place the White Person Token as indicated.
+EventGhostPlacePatronOfficeA.text,You see the translucent form of a man with a black beard appear behind the desk in the {c:TileAOffice}. The ghost of the patron is busy flipping through the pages of a book. Place the Black Person Token as indicated.
+EventGhostPlaceColonelOfficeA.button1,{qst:CONTINUE}
+EventGhostPlaceColonelOfficeB.text,The ghost of a grey haired earnest looking man in an army costume appears in the {c:TileBOffice}. This must be the patron's older brother Colonel Richard Bechman. Place the Blue Person Token as indicated.
+EventGhostPlaceColonelOfficeB.button1,{qst:CONTINUE}
+EventGhostPlaceLadyOfficeA.button1,{qst:CONTINUE}
+EventGhostPlaceLadyOfficeA.text,The ghosts of a woman in a elegant dress appears. Even in this ghosly state you recognize the heavy make-up on her face, an attempt to conceal her real age. This is Lady Othera Gilman, a resident guest at the mansion. Place the Person Token as indicated.
+EventGhostPlaceLadyOfficeB.text,The ghosts of a woman in a elegant dress appears. Even in this ghosly state you recognize the heavy make-up on her face, an attempt to conceal her real age. This is Lady Othera Gilman, a resident guest at the mansion. Place the Person Token as indicated.
+EventGhostPlaceLadyOfficeB.button1,{qst:CONTINUE}
+EventGhostPlacePatronLobbyA.button1,{qst:CONTINUE}
+EventGhostPlacePatronLobbyA.text,The air shimmers as the ghost of a dark bearded man appears. Nervously pacing up and down the {c:TileALobby} while looking in the direction of the clock every now and then. Place the Black Person Token as indicated.
+EventGhostPlacePatronLobbyB.button1,{qst:CONTINUE}
+EventGhostPlacePatronLobbyB.text,The air shimmers as the ghost of a dark bearded man appears. Nervously pacing up and down the {c:TileBLobby} while looking in the direction of the clock every now and then. Place the Black Person Token as indicated.
+EventGhostPlaceMaidLobbyA.text,The tranparent image of a woman in a maids costume appears in the {c:TileALobby}. She is cleaning the frame of a painting. Place the White Person Token as indicated
+EventGhostPlaceMaidLobbyA.button1,{qst:CONTINUE}
+EventGhostPlaceMaidLobbyB.text,The tranparent image of a woman in a maids costume appears in the {c:TileBLobby}. She is cleaning the frame of a painting. Place the White Person Token as indicated
+EventGhostPlaceMaidLobbyB.button1,{qst:CONTINUE}
+EventGhostPlaceColonelLobbyA.text,A grey haired ghost of a man in an army costumer stares at a painting in the {c:TileALobby}. Place the Blue Person Token as indicated
+EventGhostPlaceColonelLobbyA.button1,{qst:CONTINUE}
+EventGhostPlaceColonelLobbyB.text,A grey haired ghost of a man in an army costumer stares at a painting in the {c:TileBLobby}. Place the Blue Person Token as indicated
+EventGhostPlaceColonelLobbyB.button1,{qst:CONTINUE}
+EventGhostPlaceLadyLobbyA.text,A fancy dressed lady appears to enter the {c:TileALobby} from a door on the right, glances quickly at the clock and dissappears through the door on the far end. This ghostly image repeats itself as if stuck in an endless time loop. Place the Person Token as indicated
+EventGhostPlaceLadyLobbyA.button1,{qst:CONTINUE}
+EventGhostPlaceLadyLobbyB.text,A fancy dressed lady appears to enter the {c:TileBLobby} from a door on the right, glances quickly at the clock and dissappears through the door on the far end. This ghostly image repeats itself as if stuck in an endless time loop. Place the Person Token as indicated
+EventGhostPlaceLadyLobbyB.button1,{qst:CONTINUE}
+EventGhostRemoveColonel.button1,{qst:CONTINUE}
+EventGhostRemovePastor.button1,{qst:CONTINUE}
+EventGhostRemoveMaid.button1,{qst:CONTINUE}
+EventGhostRemovePatron.button1,{qst:CONTINUE}
+EventGhostRemovePatron.text,The ghost of the patron looks behind him as if he hears a noise and then dissolves. Remove the Black Person token.
+EventQEndRound.button1,{qst:CONTINUE}
+EventGhostRemoveMaid.text,The ghost of the maid looks around nervously and hurries out of sight into nothingness. Remove the White Person Token.
+EventGhostRemovePastor.text,A sound seems to startle the ghost of the pastor. With a quick move of his hand he makes the sign of a cross in the air, mumbles a prayer and disappears. Remove the Yellow Person Token.
+EventGhostRemoveColonel.text,The colonel chuckles as if he just heard something funny. With a smirk on his face he makes a dismissive gesture and lights his pipe. His ghostly form swirls to mix with the smoke from his pipe and then dissolves. Remove the Blue Person Token.
+EventGhostRemoveLady.text,Something scares the lady. She covers her face with both hands and cowers into the corner and then fades from view. Remove the Red Person Token.
+EventGhostRemoveLady.button1,{qst:CONTINUE}
+EventGhostPlacePatronLoungeA.button1,{qst:CONTINUE}
+EventGhostPlacePatronLoungeA.text,The ghost of the patron lights his sigarette and nods as if he agrees to something. He continues to listen while staring at the cabinet. Place the Black Person Token in the {c:TileALounge} as indicated.
+EventGhostPlaceMaidLoungeA.text,A ghost dressed in a maids costume appears in the {c:TileALounge}. She appears to be stuck in a timeloop  repeatedly picking up a stack of newspapers, folding them neatly and placing them on the cabinet. Place the White Person Token as indicated.
+EventGhostPlaceMaidLoungeA.button1,{qst:CONTINUE}
+EventGhostPlaceMaidLoungeB.text,A ghost dressed in a maids costume appears in the {c:TileBLounge}. She appears to be stuck in a timeloop  repeatedly picking up a stack of newspapers, folding them neatly and placing them on the cabinet. Place the White Person Token as indicated.
+EventGhostPlaceMaidLoungeB.button1,{qst:CONTINUE}
+EventGhostPlacePastorLoungeA.button1,{qst:CONTINUE}
+EventGhostPlacePastorLoungeA.text,The air in the {c:TileALounge} grows cold when the ghost of a man in a suit and clerical collar appears. He fumbles with his lighter while trying to nervously light his cigarette. Place the Yellow Person Token as indicated.
+EventGhostPlacePastorLoungeB.text,The air in the {c:TileBLounge} grows cold when the ghost of a man in a suit and clerical collar appears. He fumbles with his lighter while trying to nervously light his cigarette. Place the Yellow Person Token as indicated.
+EventGhostPlaceColonelLoungeA.button1,{qst:CONTINUE}
+EventGhostPlaceColonelLoungeA.text,A transparent image of an old man in a military uniform appears in the {c:TileALounge}. Comfortably siting in the chair and smoking his pipe. Place the Blue Person Token as indicated.
+EventGhostPlaceColonelLoungeB.button1,{qst:CONTINUE}
+EventGhostPlaceColonelLoungeB.text,A transparent image of an old man in a military uniform appears in the {c:TileBLounge}. Comfortably siting in the chair and smoking his pipe. Place the Blue Person Token as indicated.
+EventGhostPlaceLadyLoungeA.button1,{qst:CONTINUE}
+EventGhostPlaceLadyLoungeA.text,The image of a fancy dressed woman appears in the {c:TileALounge}. Even in this pale ghostly state you recognize that the lady wears to much make up to hide her true age. She must be nervous about something judging from her finger restlessly tapping the teacup she is holding. Place the Red Person Token as indicated.
+EventGhostPlaceLadyLoungeB.text,The image of a fancy dressed woman appears in the {c:TileBLounge}. Even in this pale ghostly state you recognize that the lady wears to much make up to hide her true age. She must be nervous about something judging from her finger restlessly tapping the teacup she is holding. Place the Red Person Token as indicated.
+EventGhostPlaceLadyLoungeB.button1,{qst:CONTINUE}
+EventGhostPlacePatronLoungeB.text,The ghost of the patron lights his sigarette and nods as if he agrees to something. He continues to listen while staring at the cabinet. Place the Black Person Token in the {c:TileBLounge} as indicated.
+EventGhostPlacePatronLoungeB.button1,{qst:CONTINUE}
+EventGhostPlacePatronLeisureA.button1,{qst:CONTINUE}
+EventGhostPlacePatronLeisureA.text,The patron's ghost appears in the {c:TileALeisure}. Pooring a drink and laughing as if someone just told a joke. Place the Black Person Token as indicated.
+EventGhostPlacePatronLeisureB.text,The patron's ghost appears in the {c:TileBLeisure}. Pooring a drink and laughing as if someone just told a joke. Place the Black Person Token as indicated.
+EventGhostPlacePatronLeisureB.button1,{qst:CONTINUE}
+EventGhostPlaceMaidLeisureA.text,The ghost of the maid walks around in the {c:TileALeisure}. Picking up empty glasses and wiping the surfaces clean. No matter how often the maid's ghost wipes the surface, the thick layer of dust remains. Place the White Person Token as indicated.
+EventGhostPlaceMaidLeisureB.button1,{qst:CONTINUE}
+EventGhostPlaceMaidLeisureA.button1,{qst:CONTINUE}
+EventGhostPlaceColonelLeisureA.text,The ghost of the old military man sits in the corner of {c:TileALeisure}. Nipping on what appears to be a whiskey or some other liquor. Place the Blue Person Token as indicated.
+EventGhostPlaceColonelLeisureA.button1,{qst:CONTINUE}
+EventGhostPlaceColonelLeisureB.text,The ghost of the old military man sits in the corner of {c:TileBLeisure}. Nipping on what appears to be a whiskey or some other liquor. Place the Blue Person Token as indicated.
+EventGhostPlaceColonelLeisureB.button1,{qst:CONTINUE}
+EventGhostPlaceAll.button1,Button1
+EventGhostPlacePatronChapelA.button1,{qst:CONTINUE}
+EventGhostPlacePatronChapelA.text,The ghostly form of the patron just stands there, unmoving and arms crossed in front of his chest. With his hollow eyes he is staring to ... you? You get nervous from his stern look. Place the Black Person Token as indicated.
+EventGhostPlacePatronChapelB.text,The ghostly form of the patron just stands there, unmoving and arms crossed in front of his chest. With his hollow eyes he is staring to ... you? You get nervous from his stern look. Place the Black Person Token as indicated.
+EventGhostPlacePatronChapelB.button1,{qst:CONTINUE}
+EventGhostPlaceMaidChapelA.button1,{qst:CONTINUE}
+EventGhostPlaceMaidChapelB.button1,{qst:CONTINUE}
+EventGhostPlaceMaidChapelB.text,The maid's ghost floats around, blowing into her outstretched hand as if to blow out candles that once where  there. Place the White Person Token as indicated.
+TokenMaidBChapel.button1,{qst:CONTINUE}
+EventGhostPlaceMaidChapelA.text,The maid's ghost floats around, blowing into her outstretched hand as if to blow out candles that once where  there. Place the White Person Token as indicated.
+EventGhostPlacePastorChapelA.button1,{qst:CONTINUE}
+EventGhostPlacePastorChapelB.button1,{qst:CONTINUE}
+EventGhostPlacePastorChapelA.text,The pastor's ghostly form appears leaning over a lectern. One hand firmly holding the lectern and his other hand pointing in your direction. His face looks angry and he appears to be shouting something. Whatever this man was preaching or teaching, he was very serious about it. Place the Yellow Person Token as indicated.
+EventGhostPlacePastorChapelB.text,The pastor's ghostly form appears leaning over a lectern. One hand firmly holding the lectern and his other hand pointing in your direction. His face looks angry and he appears to be shouting something. Whatever this man was preaching or teaching, he was very serious about it. Place the Yellow Person Token as indicated.
+EventGhostPlaceColonelChapelA.button1,{qst:CONTINUE}
+EventGhostPlaceColonelChapelB.button1,{qst:CONTINUE}
+EventGhostPlaceColonelChapelA.text,The ghost of a grey haired man in a military uniform sits in a chair listening. He sometimes raises his hand as if to interrupt someone but then lowers it again, shaking his head disapprovingly. Place the Blue Person Token as indicated.
+EventGhostPlaceColonelChapelB.text,The ghost of a grey haired man in a military uniform sits in a chair listening. He sometimes raises his hand as if to interrupt someone but then lowers it again, shaking his head disapprovingly. Place the Blue Person Token as indicated.
+EventGhostPlaceLadyChapelA.button1,{qst:CONTINUE}
+EventGhostPlaceLadyChapelB.button1,{qst:CONTINUE}
+EventGhostPlaceLadyChapelA.text,The ghost of a lady in a fancy red dress falls on her knees holding her hands up as if to plead to someone... or something. Judging from the mascara running down her face she must have been crying recently. Place the Red Person Token as indicated.
+EventGhostPlaceLadyChapelB.text,The ghost of a lady in a fancy red dress falls on her knees holding her hands up as if to plead to someone... or something. Judging from the mascara running down her face she must have been crying recently. Place the Red Person Token as indicated.
+EventGhostPlacePatronLibraryA.button1,{qst:CONTINUE}
+EventGhostPlacePatronLibraryB.button1,{qst:CONTINUE}
+EventGhostPlacePatronLibraryA.text,The patron's ghost nervously walks up and down the {c:TileALibrary} looking at the door as if he is expecting someone. Place the Black Person Token as indicated.
+EventGhostPlacePatronLibraryB.text,The patron's ghost nervously walks up and down the {c:TileBLibrary} looking at the door as if he is expecting someone. Place the Black Person Token as indicated.
+EventGhostPlacePastorLibraryA.button1,{qst:CONTINUE}
+EventGhostPlacePastorLibraryA.text,The pastor's ghost is flipping frantically through pages of a big book. His attention is caught by something on one page particular and mimics some words silently as he trails his finger across the page. Place the Yellow Person Token as indicated.
+EventGhostPlacePastorLibraryB.button1,{qst:CONTINUE}
+EventGhostPlacePastorLibraryB.text,The pastor's ghost is flipping frantically through pages of a big book. His attention is caught by something on one page particular and mimics some words silently as he trails his finger across the page. Place the Yellow Person Token as indicated.
+EventGhostPlaceColonelLibraryA.button1,{qst:CONTINUE}
+EventGhostPlaceColonelLibraryB.button1,{qst:CONTINUE}
+EventGhostPlaceColonelLibraryA.text,The patron's ghost nervously walks up and down the libary looking at the door as if he is expecting someone. Place the Black Person Token as indicated.
+EventGhostPlaceColonelLibraryB.text,The patron's ghost nervously walks up and down the libary looking at the door as if he is expecting someone. Place the Black Person Token as indicated.
+EventGhostPlaceLadyLibraryA.button1,{qst:CONTINUE}
+EventGhostPlaceLadyLibraryB.button1,{qst:CONTINUE}
+EventGhostPlaceLadyLibraryA.text,The ghost of the lady wearing too much make-up to hide her true age runs her finger along the back of the books. Suddenly she stops, pulls a paper that seemed stuck between two heavy leatherbound books and quickly places it in her snakeleather purse as she nervously looks over her shoulder. Place the Red Person Token as indicated.
+EventGhostPlaceLadyLibraryB.text,The ghost of the lady wearing too much make-up to hide her true age runs her finger along the back of the books. Suddenly she stops, pulls a paper that seemed stuck between two heavy leatherbound books and quickly places it in her snakeleather purse as she nervously looks over her shoulder. Place the Red Person Token as indicated.
+EventGhostPlaceMaidHallA.button1,{qst:CONTINUE}
+EventGhostPlaceMaidHallB.button1,{qst:CONTINUE}
+EventGhostPlaceMaidHallA.text,The maid's ghost is sweeping the floor in the {c:TileAHall}. Suddenly she stops and picks up something from the floor, examines it and puts it away in her apron. Place the White Person Token as indicated.
+EventGhostPlaceMaidHallB.text,The maid's ghost is sweeping the floor in the {c:TileBHall}. Suddenly she stops and picks up something from the floor, examines it and puts it away in her apron. Place the White Person Token as indicated.
+EventGhostPlacePastorHallA.button1,{qst:CONTINUE}
+EventGhostPlacePastorHallB.button1,{qst:CONTINUE}
+EventGhostPlacePastorHallA.text,The ghost of the pastor seems intregued by the paining hanging on the wall in the {c:TileAHall}. He rubbs his chin when he examines the painting more closely. Place the Yellow Person Token as indicated.
+EventGhostPlacePastorHallB.text,The ghost of the pastor seems intregued by the paining hanging on the wall in the {c:TileAHall}. He rubbs his chin when he examines the painting more closely. Place the Yellow Person Token as indicated.
+EventGhostPlaceColonelHallA.button1,{qst:CONTINUE}
+EventGhostPlaceColonelHallB.button1,{qst:CONTINUE}
+EventGhostPlaceColonelHallA.text,The ghost of the old colonel seems to have falen asleep sitting on a chair in the {c:TileAHall}. Suddenly he wakes-up and looks worried over his shoulder. Place the Blue Person Token as indicated.
+EventGhostPlaceColonelHallB.text,The ghost of the old colonel seems to have falen asleep sitting on a chair in the {c:TileBHall}. Suddenly he wakes-up and looks worried over his shoulder. Place the Blue Person Token as indicated.
+EventGhostPlaceLadyHallA.button1,{qst:CONTINUE}
+EventGhostPlaceLadyHallB.button1,{qst:CONTINUE}
+EventGhostPlaceLadyHallA.text,The ghostly appearence of a woman wearing a red dress stands with her ear pressed to the door in the {c:TileAHall}. She holds her hand in front of her mouth as if she just heard something disturbing. Place the Red Person Token as indicated.
+EventGhostPlaceLadyHallB.text,The ghostly appearence of a woman wearing a red dress stands with her ear pressed to the door in the {c:TileBHall}. She holds her hand in front of her mouth as if she just heard something disturbing. Place the Red Person Token as indicated.
+EventGhostPlacePatronBedroomA.button1,{qst:CONTINUE}
+EventGhostPlacePatronBedroomB.button1,{qst:CONTINUE}
+EventGhostPlacePatronBedroomA.text,The patron's ghost is hopping awkwardly on one leg trying to put on his pants in a hurry in the {c:TileABedroom}. He casts a nervous glance at the door. Place the Black Person Token as indicated.
+EventGhostPlacePatronBedroomB.text,The patron's ghost is hopping awkwardly on one leg trying to put on his pants in a hurry in the {c:TileBBedroom}. He casts a nervous glance at the door. Place the Black Person Token as indicated.
+EventGhostPlaceMaidBedroomA.button1,{qst:CONTINUE}
+EventGhostPlaceMaidBedroomB.button1,{qst:CONTINUE}
+EventGhostPlaceMaidBedroomA.text,The maid's ghost makes up the bed in the {c:TileABedroom} cursing silently as she discovers something between the sheets. Quickly she picks it up and puts it in her apron. Place the White Person Token as indicated.
+EventGhostPlaceMaidBedroomB.text,The maid's ghost makes up the bed in the {c:TileBBedroom} cursing silently as she discovers something between the sheets. Quickly she picks it up and puts it in her apron. Place the White Person Token as indicated.
+EventGhostPlaceLadyBedroomA.button1,{qst:CONTINUE}
+EventGhostPlaceLadyBedroomB.button1,{qst:CONTINUE}
+EventGhostPlaceLadyBedroomA.text,The ghost of the lady makes the finishing touch on her make-up looking in a small hand-held mirror while sitting on the bed in the {c:TileABedroom}. Apearenlty sattisfied with the result she puts her make-up and miror in her snakeleather purse. Place the Red Person Token as indicated.
+EventGhostPlaceLadyBedroomB.text,{c:TileBBedroom} Place the Black Person Token as indicated.
